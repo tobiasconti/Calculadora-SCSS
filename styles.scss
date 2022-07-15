@@ -1,0 +1,65 @@
+@import "./css/reset.scss";
+
+.calculator {
+    width: 352px;
+    background: $black;
+
+    &__display {
+        width: 100%;
+    }
+
+    &__display-input {
+        background: transparent;
+        border: 0;
+        color: $white;
+        outline: transparent;
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        outline: transparent;
+        margin-bottom: 20px;
+    }
+}
+
+.button {
+    border: 0;
+    outline: transparent;
+    border-radius: 9px;
+    width: 73px;
+    height: 75px;
+    font-size: calculator-rem(36);
+    box-sizing: border-box;
+
+    &:hover {
+        background: lighten($grey, 20%);
+    }
+
+    &__green {
+        background: $green;
+        color: $grey;
+        &:hover {
+            background: lighten($green, 20%);
+        }
+    }
+
+    &__red {
+        background: $red;
+        color: $grey;
+    &:hover {
+            background: lighten($red, 20%);
+        }
+    }
+
+    &__operation {
+        background: $grey;
+        color: $green;
+    }
+
+    &__number {
+        background: $grey;
+        color: $white;
+    }
+}
